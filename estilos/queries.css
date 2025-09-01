@@ -1,0 +1,155 @@
+/*Desktop*/
+
+@media screen and (max-width: 1200px) {
+    section {
+        width: 95%;
+        padding: 15px 20px;
+    }
+
+    .cards-bn,
+    .cards-planos {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .img-hero {
+        height: 450px;
+    }
+}
+
+/*Tablet*/
+
+@media screen and (max-width: 992px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: #f1f5f9;
+        z-index: 1;
+        transition: right .2s;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav.ativo {
+        right: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .hamb:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .hamb:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .hamb:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #hero {
+        margin-top: 60px;
+        flex-flow: column-reverse nowrap;
+        gap: 80px;
+    }
+
+    .img-hero {
+        position: inherit;
+        height: 475px;
+    }
+
+    .txt-hero {
+        align-items: center;
+    }
+
+    .titulo-hero {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .desc-hero {
+        font-size: 14px;
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .quebras {
+        padding: 210px 0px 60px 0px;
+    }
+
+    #beneficios {
+        flex-flow: column nowrap;
+        gap: 40px;
+    }
+
+    .cont-planos {
+        height: 1600px;
+        margin-top: 60px;
+    }
+
+    #planos {
+        flex-flow: column nowrap;
+        gap: 40px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+
+    .politica,
+    .copy,
+    .infos-foot a {
+        font-size: 12px;
+    }
+}
+
+/*Celular*/
+
+@media screen and (max-width: 767px) {
+
+    .modal {
+        height: 300px;
+        width: 300px;
+    }
+
+    .btn-head {
+        width: 105px;
+        height: 33px;
+    }
+
+    #hero {
+        margin-top: 20px;
+        gap: 40px;
+    }
+
+    .img-hero {
+        height: 260px;
+    }
+
+    .titulo-hero {
+        font-size: 34px;
+    }
+
+    .desc-hero {
+        font-size: 12px;
+        max-width: 300px;
+    }
+
+    .quebras {
+        padding: 80px 0px 40px 0px;
+    }
+
+    .infos-foot {
+        flex-flow: column nowrap;
+        gap: 20px;
+    }
+}

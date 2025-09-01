@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/queries.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="modal">
+        <span class="x"></span>
+
+        <h6 class="titulo-modal">Aviso</h6>
+
+        <p class="desc-modal">Este projeto é apenas uma demonstração de portfólio. Nenhum dos planos ou serviços exibidos está disponível para contratação.</p>
+    </div>
+
+    <div class="overlay">
+
+    </div>
+
+    <header>
+        <section id="head">
+            <h1 class="logo">FitLife</h1>
+
+            <nav class="nav">
+                <a href="#beneficios" class="links">Benefícios</a>
+                <a href="#planos" class="links">Planos</a>
+                <a href="#foot" class="links">Contato</a>
+            </nav>
+
+            <div class="style-mob">
+                <button class="btn-head btns">Matricule-se</button>
+
+                <div class="menu">
+                    <span class="hamb"></span>
+                    <span class="hamb"></span>
+                    <span class="hamb"></span>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="hero">
+            <article class="txt-hero">
+                <h2 class="titulo-hero">Transforme seu corpo, transforme sua vida!</h2>
+
+                <p class="desc-hero">Treinos personalizados, planos acessíveis e acompanhamento de especialistas.</p>
+
+                <button class="btn-hero btns">
+                    <p>Comece agora</p>
+
+                    <div class="arrow">
+                        <span class="material-icons">arrow_forward</span>
+                    </div>
+                </button>
+            </article>
+
+            <img src="imagens/mulher-hero.png" alt="Imagem de mulher" class="img-hero">
+        </section>
+
+        <h3 class="quebras">Benefícios</h3>
+
+        <section id="beneficios">
+            <article class="cards-bn">
+                <div class="check">
+                    <span class="material-icons">check</span>
+                </div>
+
+                <h4 class="titulo-bn">Planos acessíveis</h4>
+
+                <p class="desc-bn">Opções que cabem no seu bolso sem perder a qualidade.</p>
+            </article>
+
+            <article class="cards-bn">
+                <div class="check">
+                    <span class="material-icons">check</span>
+                </div>
+
+                <h4 class="titulo-bn">Treinadores qualificados</h4>
+
+                <p class="desc-bn">Profissionais prontos para acompanhar sua evolução.</p>
+            </article>
+
+            <article class="cards-bn">
+                <div class="check">
+                    <span class="material-icons">check</span>
+                </div>
+
+                <h4 class="titulo-bn">Estrutura moderna</h4>
+
+                <p class="desc-bn">Equipamentos de última geração e ambiente motivador.</p>
+            </article>
+        </section>
+
+        <div class="cont-planos">
+            <section id="planos">
+                <article class="cards-planos">
+                    <div class="planos-head">
+                        <h5>Básico</h5>
+
+                        <p>R$ 79/mês</p>
+                    </div>
+
+                    <ul class="planos-main">
+                        <li>Acesso em horário comercial</li>
+                        <li>Treino padrão</li>
+                        <li>Sem avaliação mensal</li>
+                    </ul>
+
+                    <button class="btn-planos btns">Assinar</button>
+                </article>
+
+                <article class="cards-planos">
+                    <div class="planos-head">
+                        <h5>Intermediário</h5>
+
+                        <p>R$ 129/mês</p>
+                    </div>
+
+                    <ul class="planos-main">
+                        <li>Acesso ilimitado</li>
+                        <li>Treino personalizado</li>
+                        <li>1 avaliação mensal</li>
+                    </ul>
+
+                    <button class="btn-planos btns">Assinar</button>
+                </article>
+
+                <article class="cards-planos">
+                    <div class="planos-head">
+                        <h5>Premium</h5>
+
+                        <p>R$ 199/mês</p>
+                    </div>
+
+                    <ul class="planos-main">
+                        <li>Acesso ilimitado</li>
+                        <li>Treino personalizado</li>
+                        <li>Avaliações mensais</li>
+                        <li>Consultoria nutricional</li>
+                    </ul>
+
+                    <button class="btn-planos btns">Assinar</button>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section id="foot">
+            <article class="cont-sociais">
+                <div class="sociais"></div>
+                <div class="sociais"></div>
+                <div class="sociais"></div>
+            </article>
+
+            <article class="infos-foot">
+                <p class="politica"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+
+                <p class="copy">© 2025 FitLife – Todos os direitos reservados</p>
+            </article>
+        </section>
+    </footer>
+
+    <script>
+        const modal = document.querySelector('.modal')
+        const overlay = document.querySelector('.overlay')
+        const btns = document.querySelectorAll('.btns')
+        const x = document.querySelector('.x')
+        const menu = document.querySelector('.menu')
+        const nav = document.querySelector('.nav')
+        const links = document.querySelectorAll('.links')
+
+        // modals e overlay
+
+        function desativarModals(m, o) {
+            m.classList.remove('ativo')
+            o.classList.remove('ativo')
+        }
+        
+        btns.forEach(val => {
+            val.addEventListener('click', () => {
+                modal.classList.toggle('ativo')
+                overlay.classList.toggle('ativo')
+            })
+        })
+
+        overlay.addEventListener('click', () => {
+            desativarModals(modal, overlay)
+        })
+
+        x.addEventListener('click', () => {
+            desativarModals(modal, overlay)
+        })
+
+        // menu hamburguer
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo')
+            nav.classList.toggle('ativo')
+        })
+
+        links.forEach(val => {
+            val.addEventListener('click', () => {
+                menu.classList.remove('ativo')
+                nav.classList.remove('ativo')
+            })
+        })
+    </script>
+</body>
+</html>
